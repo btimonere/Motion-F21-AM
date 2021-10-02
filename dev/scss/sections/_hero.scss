@@ -1,0 +1,33 @@
+#hero{
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+
+    @include xl{
+        display: grid;
+        grid-template-areas: ". hero .";
+        grid-template-columns: auto 1440px auto;
+    }
+
+    >div{
+        background-image: url("../img/hero/pets_hero.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+
+        @include xl{
+            grid-area: hero;
+        }
+    }
+        section{
+            color: $darkpink;
+            text-align: center;
+
+        }
+
+
+    
+}
