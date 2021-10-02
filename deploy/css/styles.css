@@ -1,4 +1,13 @@
 /* =============
+    Mixins
+============= */
+/* ---------------- Font Sizing ---------------- */
+html {
+  font-size: 100%;
+}
+
+/* ---------------- Media Queries ---------------- */
+/* =============
     Variables
 ============= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -414,7 +423,7 @@ nav ul li {
 }
 nav ul li a:link, nav ul li a:visited {
   font-family: "Cabin", sans-serif;
-  font-size: rem-calc(28);
+  font-size: 1.75rem;
   color: black;
   font-weight: 600;
   transition: 0, 25s;
@@ -443,3 +452,77 @@ header > div aside a {
 /* =============
     Footer
 ============= */
+#content {
+  display: grid;
+  grid-template-columns: auto 90% auto;
+  grid-template-areas: ". content .";
+  padding: 64px 0;
+}
+@media (min-width: 768px) {
+  #content {
+    padding: 100px 0;
+    grid-template-columns: auto 80% auto;
+  }
+}
+@media (min-width: 1024px) {
+  #content {
+    padding: 120px 0;
+    grid-template-columns: auto 80% auto;
+  }
+}
+@media (min-width: 1440px) {
+  #content {
+    padding: 100px 0;
+    grid-template-columns: auto 1440px auto;
+  }
+}
+#content > div {
+  grid-area: content;
+}
+@media (min-width: 1024px) {
+  #content > div {
+    padding: 0 30%;
+  }
+}
+#content > div h1 {
+  font-size: 2.25rem;
+  margin-bottom: 10px;
+  color: #82371C;
+}
+#content > div p {
+  font-size: 1rem;
+  line-height: 1.875rem;
+  color: #82371C;
+}
+
+#hero {
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  #hero {
+    display: grid;
+    grid-template-areas: ". hero .";
+    grid-template-columns: auto 1440px auto;
+  }
+}
+#hero > div {
+  background-image: url("../img/hero/pets_hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1440px) {
+  #hero > div {
+    grid-area: hero;
+  }
+}
+#hero section {
+  color: #82371C;
+  text-align: center;
+  padding-bottom: 370px;
+  padding-left: 32px;
+}
