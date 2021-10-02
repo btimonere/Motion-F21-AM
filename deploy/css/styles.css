@@ -1,13 +1,4 @@
 /* =============
-    Mixins
-============= */
-/* ---------------- Font Sizing ---------------- */
-html {
-  font-size: 100%;
-}
-
-/* ---------------- Media Queries ---------------- */
-/* =============
     Variables
 ============= */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -365,37 +356,24 @@ ul li {
   list-style: none;
 }
 
-.container-grid {
-  display: grid;
-  grid-template-areas: ". grid-content .";
-  grid-template-columns: 15px auto 15px;
-  height: 100vh;
-}
-@media (min-width: 1200px) {
-  .container-grid {
-    grid-template-columns: auto 1200px auto;
-  }
-}
-.container-grid > div {
-  grid-area: grid-content;
+a {
+  text-decoration: none;
 }
 
 /* =============
     Typography
 ============= */
-h1, h2, h3, h4 {
+body {
+  font-family: "Cabin", sans-serif;
+  font-family: "Crete Round", serif;
+}
+body h1, body h2, body h3, body h4 {
   margin: 0;
   padding: 0;
 }
-
-p {
+body p {
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  font-size: 6.25rem;
-  color: red;
 }
 
 /* =============
@@ -422,9 +400,46 @@ textarea {
 /* =============
     Navigation
 ============= */
+nav {
+  height: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+nav ul li {
+  margin-left: 4vw;
+}
+nav ul li a:link, nav ul li a:visited {
+  font-family: "Cabin", sans-serif;
+  font-size: rem-calc(28);
+  color: black;
+  font-weight: 600;
+  transition: 0, 25s;
+}
+nav ul li a:link:hover, nav ul li a:link:active, nav ul li a:visited:hover, nav ul li a:visited:active {
+  color: #82371C;
+}
+
 /* =============
     Header
 ============= */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #FDF2F5;
+}
+header > div {
+  display: grid;
+  grid-template-columns: 35% auto;
+  padding: 8px 16px;
+}
+header > div aside a {
+  display: inline-block;
+}
+
 /* =============
     Footer
 ============= */
