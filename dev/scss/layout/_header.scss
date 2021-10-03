@@ -5,6 +5,7 @@ header{
     position: fixed;
     width: 100%;
     background-color: $lightpink;
+    z-index: 1000;
 
     >div{
 display: grid;
@@ -15,6 +16,9 @@ aside{
     a{
         display: inline-block;
     }
+}
+section{
+    padding-right: 160px;
 }
 
 
