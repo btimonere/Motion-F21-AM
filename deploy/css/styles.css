@@ -503,6 +503,7 @@ header > div section {
   height: 90vh;
   width: 100%;
   overflow: hidden;
+  margin-top: 80px;
 }
 @media (min-width: 1440px) {
   #hero {
