@@ -503,7 +503,6 @@ header > div section {
   height: 90vh;
   width: 100%;
   overflow: hidden;
-  margin-top: 80px;
 }
 @media (min-width: 1440px) {
   #hero {
@@ -525,12 +524,14 @@ header > div section {
     grid-area: hero;
   }
 }
+@media (min-width: 1024px) {
+  #hero > div h2 {
+    padding-right: 88px;
+  }
+}
 #hero section {
   color: #82371C;
   text-align: center;
   padding-bottom: 370px;
   padding-left: 32px;
-}
-#hero h2 {
-  padding-right: 88px;
 }

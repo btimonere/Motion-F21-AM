@@ -2,8 +2,6 @@
     height: 90vh;
     width: 100%;
     overflow: hidden;
-    margin-top: 80px;
-
     @include xl{
         display: grid;
         grid-template-areas: ". hero .";
@@ -22,6 +20,12 @@
         @include xl{
             grid-area: hero;
         }
+
+        @include lg{
+            h2{
+                padding-right: 88px;
+            }
+        }
     }
         section{
             color: $darkpink;
@@ -30,9 +34,7 @@
             padding-left: 32px;
 
         }
-        h2{
-            padding-right: 88px;
-        }
+       
 
 
     
