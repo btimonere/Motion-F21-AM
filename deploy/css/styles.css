@@ -456,6 +456,38 @@ header > div section {
 /* =============
     Footer
 ============= */
+#preloader {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  grid-template-areas: ". preloader .";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  #preloader {
+    grid-template-columns: auto 90vw auto;
+  }
+}
+@media (min-width: 1024px) {
+  #preloader {
+    grid-template-columns: auto 90vw auto;
+  }
+}
+@media (min-width: 1440px) {
+  #preloader {
+    grid-template-columns: auto 90vw auto;
+  }
+}
+#preloader > div {
+  grid-area: preloader;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #content {
   display: grid;
   grid-template-columns: auto 90% auto;
