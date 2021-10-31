@@ -54,8 +54,24 @@ tl.to("#bone", { duration: 2.5, ease: "Elastic.easeOut", yoyo: true, y: "-100" }
 return tl;
 }
 
+function wind (){
+    const tl = gsap.timeline();
+    gsap.to("#line1", { duration: 2, ease: "power3.out", x: "-800%" });
+    gsap.to("#line2", { duration: 2, ease: "power3.out", x: "-900%" });
+    gsap.to("#line4", { duration: 2, ease: "power3.out", x: "-800%" });
+    gsap.to("#line5", { duration: 2, ease: "power3.out", x: "-800%" });
+    gsap.to("#line6", { duration: 2, ease: "power3.out", x: "-800%" });
+    gsap.to("#line7", { duration: 2, ease: "power3.out", x: "-900%" });
+    gsap.to("#line8", { duration: 2, ease: "power3.out", x: "-800%" });
+    gsap.to("#line9", { duration: 2, ease: "power3.out", x: "-800%" });
+    gsap.to("#line10", { duration: 2, ease: "power3.out", x: "-800%" });
+    gsap.to("#line11", { duration: 2, ease: "power3.out", x: "-800%" });
+    return tl;
+}
+
 mainTL.add(dogrun)
-.add(verticalbone);
+.add(verticalbone)
+.add(wind);
 
 
  //mainTL.to("#bone",{duration:2, alpha:0, scale:2});  
