@@ -1,7 +1,9 @@
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
+import { ExpoScaleEase, RoughEase, SlowMo } from "gsap/EasePack";
+import { EaselPlugin } from "gsap/EaselPlugin";
 
-gsap.registerPlugin(GSDevTools);
+gsap.registerPlugin(GSDevTools, EaselPlugin, ExpoScaleEase, RoughEase, SlowMo);
 
 
 
@@ -11,7 +13,7 @@ const mainTL = gsap.timeline();
 
 
 function dogrun (){
-const tl = gsap.timeline({loop: 2});
+const tl = gsap.timeline();
 tl.to("#dog1", {duration: 0.1, autoAlpha: 0});
 tl.to("#dog2", {duration: 0.1, autoAlpha: 0});
 tl.to("#dog3", {duration: 0.1, autoAlpha: 0});
@@ -38,12 +40,22 @@ tl.to("#dog23", {duration: 0.1, autoAlpha: 0});
 return tl;
 }
 
-// function verticalbone (){
-//     const tl = gsap.timeline();
-    
-// }
+//repeat: 2 was not working
 
-mainTL.add(dogrun);
+
+function verticalbone (){
+const tl = gsap.timeline();
+tl.to("#bone", { duration: 2.5, ease: "Elastic.easeOut", yoyo: true, y: "-100" });
+
+
+// tl.to("#bone", 1, {y:-100});
+// tl.set("#bone", {zIndex:500});
+// tl.to("#bone", 1, {y:0});
+return tl;
+}
+
+mainTL.add(dogrun)
+.add(verticalbone);
 
 
  //mainTL.to("#bone",{duration:2, alpha:0, scale:2});  
@@ -81,7 +93,7 @@ mainTL.add(dogrun);
 
        
 
-//        GSDevTools.create();
+GSDevTools.create();
 
 
 
