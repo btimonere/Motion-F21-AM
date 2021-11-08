@@ -9,58 +9,58 @@ const mainTL = gsap.timeline();
 
 
 function dogrun (){
-const tl = gsap.timeline({repeat: 2});
+const tl = gsap.timeline({repeat: 3});
 
-tl.from(".dog", {stagger: 1, duration: 2, autoAlpha: 0, ease:"steps (22)"})
+// tl.from(".dog", {stagger: 1, duration: 2, autoAlpha: 0, ease:"steps (22)"})
 // .to(".dog", {stagger: 2, duration: 4, autoAlpha: 0, ease:"steps (22)"},"-=75");
 // .to(".dog", {stagger: 0.2,duration: 0.02, autoAlpha: 0},"-=0.44");
 
 
-// tl.from("#dog1", {duration: 0.02, autoAlpha: 0});
-// tl.from("#dog2", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog1", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog3", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog2", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog4", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog3", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog5", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog4", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog6", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog5", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog7", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog6", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog8", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog7", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog9", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog8", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog10", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog9", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog11", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog10", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog12", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog11", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog13", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog12", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog14", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog13", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog15", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog14", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog16", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog15", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog17", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog16", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog18", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog17", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog19", {duration: 0.02, autoAlpha: 0});
-// tl.to("#do18", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog20", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog19", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog21", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog20", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog22", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog21", {duration: 0.02, autoAlpha:0});
-// tl.from("#dog23", {duration: 0.02, autoAlpha: 0});
-// tl.to("#dog22", {duration: 0.02, autoAlpha:0});
+tl.from("#dog1", {duration: 0.02, autoAlpha: 0});
+tl.from("#dog2", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog1", {duration: 0.02, autoAlpha:0});
+tl.from("#dog3", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog2", {duration: 0.02, autoAlpha:0});
+tl.from("#dog4", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog3", {duration: 0.02, autoAlpha:0});
+tl.from("#dog5", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog4", {duration: 0.02, autoAlpha:0});
+tl.from("#dog6", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog5", {duration: 0.02, autoAlpha:0});
+tl.from("#dog7", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog6", {duration: 0.02, autoAlpha:0});
+tl.from("#dog8", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog7", {duration: 0.02, autoAlpha:0});
+tl.from("#dog9", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog8", {duration: 0.02, autoAlpha:0});
+tl.from("#dog10", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog9", {duration: 0.02, autoAlpha:0});
+tl.from("#dog11", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog10", {duration: 0.02, autoAlpha:0});
+tl.from("#dog12", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog11", {duration: 0.02, autoAlpha:0});
+tl.from("#dog13", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog12", {duration: 0.02, autoAlpha:0});
+tl.from("#dog14", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog13", {duration: 0.02, autoAlpha:0});
+tl.from("#dog15", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog14", {duration: 0.02, autoAlpha:0});
+tl.from("#dog16", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog15", {duration: 0.02, autoAlpha:0});
+tl.from("#dog17", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog16", {duration: 0.02, autoAlpha:0});
+tl.from("#dog18", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog17", {duration: 0.02, autoAlpha:0});
+tl.from("#dog19", {duration: 0.02, autoAlpha: 0});
+tl.to("#do18", {duration: 0.02, autoAlpha:0});
+tl.from("#dog20", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog19", {duration: 0.02, autoAlpha:0});
+tl.from("#dog21", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog20", {duration: 0.02, autoAlpha:0});
+tl.from("#dog22", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog21", {duration: 0.02, autoAlpha:0});
+tl.from("#dog23", {duration: 0.02, autoAlpha: 0});
+tl.to("#dog22", {duration: 0.02, autoAlpha:0});
 
 return tl;
 }
@@ -69,9 +69,11 @@ return tl;
 
 
 function verticalbone (){
-const tl = gsap.timeline({repeat: 0.5});
+const tl = gsap.timeline({repeat: 1});
 tl.from("#bone", { duration: 1, ease: "none", y: "-100" });
 tl.to("#bone", { duration: 1, ease: "none", y: "-100" });
+
+
 
 
 // tl.from("#bone", 1, {y:-100});
@@ -80,6 +82,14 @@ tl.to("#bone", { duration: 1, ease: "none", y: "-100" });
 return tl;
 }
 
+
+function verticalbone1 (){
+    const tl = gsap.timeline({});
+
+tl.to('#bone', 4, { rotation: "+=360", ease: "Linear.easeNone", transformOrigin:"50% 50%" });
+
+return tl;
+}
 // function wind1 (){
 //     const tl = gsap.timeline();
 //     gsap.to("#line1", { duration: 1, ease: "none", x: "-800%" });
@@ -131,9 +141,12 @@ function wind1 (){
 
 
 
+
 mainTL.add(dogrun)
 .add(verticalbone) 
+.add(verticalbone1) 
 .add(wind1);
+// .add(shadowscale)
 
 // .add(boneshadow)
 
