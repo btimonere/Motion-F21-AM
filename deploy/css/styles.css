@@ -470,6 +470,9 @@ header > div section {
   z-index: 1000;
   background-color: white;
 }
+#preloader .dog {
+  visibility: hidden;
+}
 @media (min-width: 768px) {
   #preloader {
     grid-template-columns: auto 90vw auto;

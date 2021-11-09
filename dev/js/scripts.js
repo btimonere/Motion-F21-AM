@@ -61,6 +61,7 @@ tl.from("#dog22", {duration: 0.02, autoAlpha: 0});
 tl.to("#dog21", {duration: 0.02, autoAlpha:0});
 tl.from("#dog23", {duration: 0.02, autoAlpha: 0});
 tl.to("#dog22", {duration: 0.02, autoAlpha:0});
+tl.to("#dog23", {duration: 0.02, autoAlpha:0});
 
 return tl;
 }
@@ -133,26 +134,32 @@ return tl;
 
 function wind1 (){
     const tl = gsap.timeline({repeat: 2});
-    gsap.to("#line1", { duration: 1, ease: "none", x: "-1000%"});
-    gsap.to("#line2", { duration: 1, ease: "none", x: "-1300%" });
-    gsap.to("#line3", { duration: 1, ease: "none", x: "-1000%" });
-    gsap.to("#line4", { duration: 1, ease: "none", x: "-1000%" });
-    gsap.to("#line5", { duration: 1, ease: "none", x: "-1000%" });
-    gsap.to("#line6", { duration: 1, ease: "none", x: "-1500%" });
-    gsap.to("#line7", { duration: 1, ease: "none", x: "-1500%" });
-    gsap.to("#line8", { duration: 1, ease: "none", x: "-1800%" });
-    gsap.to("#line9", { duration: 1, ease: "none", x: "-1700%" });
-    gsap.to("#line10", { duration: 1, ease: "none", x: "-1700%" });
-    gsap.to("#line11", { duration: 1, ease: "none", x: "-1800%" });
+
+    gsap.to("#line2", { duration: .8, ease: "none", repeat: -1, x: "-3000%"});
+    gsap.to("#line3", { duration: .9, ease: "none", x: "-1900%", repeat: -1,repeatDelay: 1});
+    gsap.to("#line4", { duration: .7, ease: "none", x: "-1700%", repeat: -1,repeatDelay: .5});
+    gsap.to("#line5", { duration: 1.3, ease: "none", x: "-1800%", repeat: -1,repeatDelay: 1.2});
+    gsap.to("#line6", { duration: 1.1, ease: "none", x: "-1500%", repeat: -1,repeatDelay: .7});
+    gsap.to("#line7", { duration: .9, ease: "none", x: "-1600%", repeat: -1,repeatDelay: .5});
+    gsap.to("#line8", { duration: .8, ease: "none", x: "-2200%", repeat: -1,repeatDelay: 1});
+    gsap.to("#line9", { duration: .75, ease: "none", x: "-1700%", repeat: -1,repeatDelay: .5});
+    gsap.to("#line10", { duration: .8, ease: "none", x: "-2000%", repeat: -1,repeatDelay: 1});
+    gsap.to("#line11", { duration: 1, ease: "none", x: "-1800%", repeat: -1,repeatDelay: .4});
 
 
     
     return tl;
 }
 
+
+
+
+
+
+
 function boneprogress (){
     const tl = gsap.timeline();
-    gsap.from("#bone", {duration: 6, scaleX: 0});
+    gsap.from("#bone", {duration: 6, value:100});
 return tl;
 }
 
