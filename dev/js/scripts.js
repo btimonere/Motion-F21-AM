@@ -123,8 +123,7 @@ function dogshadow (){
     gsap.to("#shadow-dog", { duration: 1, scaleX: 1.5, scaleY:1.5, yoyoEase: "Power2.easeOut", ease: "none", repeat: 5, transformOrigin:"50% 50%"});
 
 return tl;
-}    
-
+}
 
 
 
@@ -133,8 +132,8 @@ return tl;
 
 
 function wind1 (){
-    const tl = gsap.timeline({repeat: 1});
-    gsap.to("#line1", { duration: 1, ease: "none", x: "-1000%" });
+    const tl = gsap.timeline({repeat: 2});
+    gsap.to("#line1", { duration: 1, ease: "none", x: "-1000%"});
     gsap.to("#line2", { duration: 1, ease: "none", x: "-1300%" });
     gsap.to("#line3", { duration: 1, ease: "none", x: "-1000%" });
     gsap.to("#line4", { duration: 1, ease: "none", x: "-1000%" });
@@ -151,6 +150,12 @@ function wind1 (){
     return tl;
 }
 
+function boneprogress (){
+    const tl = gsap.timeline();
+    gsap.from("#bone", {duration: 6, scaleX: 0});
+return tl;
+}
+
 
 
 
@@ -158,6 +163,7 @@ function wind1 (){
 
 mainTL.add(dogrun)
 .add(verticalbone) 
+.add(boneprogress) 
 .add(spinbone) 
 .add(wind1)
 // .add(shadowscale)
