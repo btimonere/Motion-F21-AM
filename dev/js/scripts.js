@@ -9,7 +9,7 @@ const mainTL = gsap.timeline();
 
 
 function dogrun (){
-const tl = gsap.timeline({repeat: 5});
+const tl = gsap.timeline({repeat: 6});
 
 // tl.from(".dog", {stagger: 1, duration: 2, autoAlpha: 0, ease:"steps (22)"})
 // .to(".dog", {stagger: 2, duration: 4, autoAlpha: 0, ease:"steps (22)"},"-=75");
@@ -115,11 +115,16 @@ return tl;
 
 function boneshadow (){
     const tl = gsap.timeline();
-    // gsap.to("#shadow-bone", { duration: 1, scaleX: 2, scaleY:2, transformOrigin:"50% 50%"});
+
     gsap.to("#shadow-bone", { duration: 1, scaleX: 2, scaleY:2, yoyoEase: "Power2.easeOut", ease: "none", repeat: 5, transformOrigin:"50% 50%"});
 
 return tl;
 }    
+
+
+    // gsap.to("#shadow-bone", { duration: 1, scaleX: 2, scaleY:2, transformOrigin:"50% 50%"});
+
+
 
 
 function dogshadow (){
@@ -162,7 +167,8 @@ function wind1 (){
 
 function boneprogress (){
     const tl = gsap.timeline();
-    gsap.from("#bone", {duration: 6, scaleX: 0})
+    // gsap.from("#bone", {duration: 6, scaleX: 0})
+    gsap.from("#bone", {duration: 8, alpha: 0})
 return tl;
 }
 
@@ -175,6 +181,27 @@ function bonescale (){
     gsap.to("#bone", {duration: 6, scaleX: 100, scaleY: 100, delay: 6})
 return tl;
 }
+
+function hero (){
+    const tl = gsap.timeline();
+
+
+tl.from("#hero",{duration:1.5, alpha:0});
+tl.from("#hero h1",{duration:1, alpha:0, x:"-200"});
+tl.from("#hero h2",{duration:1.5, alpha:0, x:"-200"});
+
+return tl;}
+
+
+
+
+
+
+function transition (){
+    const tl = gsap.timeline();
+
+    tl.to("#preloader",{duration:2, autoAlpha:0},"-=1");
+return tl;}
 
 
 
@@ -241,15 +268,6 @@ mainTL.add(dogrun(),"same")
 
 
 
-function transition (){
-    const tl = gsap.timeline();
-
-
-    tl.to("#done",{duration:2, motionPath:{path:[{x:51,y:-600}]}});
-
-    tl.to("#preloader",{duration:2, autoAlpha:0},"-=2");
-return tl;}
-
 
 
 
@@ -266,14 +284,6 @@ return tl;}
 // name of TL, end or beginning, what to animate, 
 //how long, what you want to do
 // maintl.from("hero",{duration: 2, alpha:0});
-function hero (){
-    const tl = gsap.timeline();
 
 
-tl.from("#hero",{duration:1.5, alpha:0});
-tl.from("#hero h1",{duration:1, alpha:0, x:"-200"});
-tl.from("#hero h2",{duration:1.5, alpha:0, x:"-200"});
-
-return tl;}
-
-GSDevTools.create();
+// GSDevTools.create();
