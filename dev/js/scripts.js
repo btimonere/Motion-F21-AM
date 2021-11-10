@@ -9,7 +9,7 @@ const mainTL = gsap.timeline();
 
 
 function dogrun (){
-const tl = gsap.timeline({repeat: 3});
+const tl = gsap.timeline({repeat: 5});
 
 // tl.from(".dog", {stagger: 1, duration: 2, autoAlpha: 0, ease:"steps (22)"})
 // .to(".dog", {stagger: 2, duration: 4, autoAlpha: 0, ease:"steps (22)"},"-=75");
@@ -66,28 +66,31 @@ tl.to("#dog23", {duration: 0.02, autoAlpha:0});
 return tl;
 }
 
+
+
+
+
 //repeat: 2 was not working
 
 
 function verticalbone (){
-const tl = gsap.timeline({repeat: 1});
+const tl = gsap.timeline({repeat: 2});
 tl.from("#bone", { duration: 1, ease: "none", y: "-100" });
 tl.to("#bone", { duration: 1, ease: "none", y: "-100" });
-
+return tl;
+}
 
 
 
 // tl.from("#bone", 1, {y:-100});
 // tl.set("#bone", {zIndex:500});
 // tl.from("#bone", 1, {y:0});
-return tl;
-}
 
 
 function spinbone (){
     const tl = gsap.timeline({});
 
-tl.to('#bone', 4, { rotation: "+=360", ease: "none", reapeat: 2, transformOrigin:"50% 50%" });
+tl.to('#bone', 6, { rotation: "+=360", ease: "none", reapeat: 3, transformOrigin:"50% 50%" });
 
 return tl;
 }
@@ -159,7 +162,17 @@ function wind1 (){
 
 function boneprogress (){
     const tl = gsap.timeline();
-    gsap.from("#bone", {duration: 6, value:100});
+    gsap.from("#bone", {duration: 6, scaleX: 0})
+return tl;
+}
+
+
+
+
+
+function bonescale (){
+    const tl = gsap.timeline();
+    gsap.to("#bone", {duration: 6, scaleX: 100, scaleY: 100, delay: 6})
 return tl;
 }
 
@@ -168,14 +181,17 @@ return tl;
 
 
 
-mainTL.add(dogrun)
-.add(verticalbone) 
-.add(boneprogress) 
-.add(spinbone) 
-.add(wind1)
+mainTL.add(dogrun(),"same")
+.add(verticalbone(),"same") 
+.add(boneprogress(),"same") 
+.add(spinbone(),"same") 
+.add(wind1(),"same")
 // .add(shadowscale)
-.add(boneshadow)
-.add(dogshadow);
+.add(boneshadow(),"same")
+.add(dogshadow(),"same")
+.add(bonescale())
+.add(transition())
+.add(hero());
 
 
 // .add(wind2)
@@ -216,7 +232,6 @@ mainTL.add(dogrun)
 
        
 
-GSDevTools.create();
 
 
 
@@ -226,6 +241,14 @@ GSDevTools.create();
 
 
 
+function transition (){
+    const tl = gsap.timeline();
+
+
+    tl.to("#done",{duration:2, motionPath:{path:[{x:51,y:-600}]}});
+
+    tl.to("#preloader",{duration:2, autoAlpha:0},"-=2");
+return tl;}
 
 
 
@@ -243,7 +266,14 @@ GSDevTools.create();
 // name of TL, end or beginning, what to animate, 
 //how long, what you want to do
 // maintl.from("hero",{duration: 2, alpha:0});
+function hero (){
+    const tl = gsap.timeline();
 
-// mainTL.from("#hero",{duration:1.5, alpha:0})
-// .from("#hero h1",{duration:1, alpha:0, x:"-200"})
-// .from("#hero h2",{duration:1.5, alpha:0, x:"-200"});
+
+tl.from("#hero",{duration:1.5, alpha:0});
+tl.from("#hero h1",{duration:1, alpha:0, x:"-200"});
+tl.from("#hero h2",{duration:1.5, alpha:0, x:"-200"});
+
+return tl;}
+
+GSDevTools.create();
