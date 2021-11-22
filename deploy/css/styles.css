@@ -428,3 +428,32 @@ textarea {
 /* =============
     Footer
 ============= */
+#logo {
+  display: grid;
+  grid-template-columns: auto 90vh auto;
+  grid-template-areas: ". logo .";
+  height: 100vh;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #logo {
+    grid-template-columns: auto 85vw auto;
+  }
+}
+@media (min-width: 992px) {
+  #logo {
+    grid-template-columns: auto 80vw auto;
+  }
+}
+@media (min-width: 576px) {
+  #logo {
+    grid-template-columns: auto 75vw auto;
+  }
+}
+#logo > div {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
