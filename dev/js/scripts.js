@@ -286,4 +286,4 @@ mainTL.add(dogrun(),"same")
 // maintl.from("hero",{duration: 2, alpha:0});
 
 
-// GSDevTools.create();
+GSDevTools.create();
