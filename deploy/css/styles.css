@@ -452,3 +452,6 @@ textarea {
   align-items: center;
   height: 100%;
 }
+#logo > div svg LaurensBakery {
+  display: none;
+}
