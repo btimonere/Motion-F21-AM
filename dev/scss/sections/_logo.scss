@@ -6,6 +6,9 @@
     width: 100%;
 
 
+
+
+
     @include md{
         grid-template-columns: auto 85vw auto;
     }
@@ -26,8 +29,8 @@ height: 100%;
 
 svg{
 
-    LaurensBakery {
-        display: none
+    #frostingcircle{
+        position: relative;
     }
 
 
