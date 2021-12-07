@@ -47,6 +47,14 @@ function sprinkright (){
     return tl;
 }
 
+function breakoff (){
+    const tl = gsap.timeline();
+    tl.to("#bottomhalf",{duration: .5, ease: "none", rotation: "-60", transformOrigin: "right 50%"});
+    tl.to("#bottomhalf",{duration: 2, ease: "none", rotation: "-300", transformOrigin: "50% 50%", y:1500});
+    //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
+    return tl;
+}
+
 
 
 
@@ -59,7 +67,8 @@ mainTL.add(donutspin(),"same")
 .add(donutleft(),"same")
 .add(pinkright())
 .add(sprinkspin(),"spin")
-.add(sprinkright(),"spin");
+.add(sprinkright(),"spin")
+.add(breakoff());
 
 
 
