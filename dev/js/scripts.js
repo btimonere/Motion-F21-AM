@@ -12,6 +12,10 @@ gsap.registerPlugin(GSDevTools, MorphSVGPlugin, EaselPlugin, ExpoScaleEase, Roug
 const mainTL = gsap.timeline();
 
 
+
+
+
+
 function donutspin (){
     const tl = gsap.timeline();
     tl.to("#plaindoughnut",{duration: 2, rotation: "-=330", ease: "none", transformOrigin:"50% 50%"});
@@ -26,8 +30,9 @@ function donutleft (){
     return tl;
 }
 
-function pinkright (){
+function pinkmove (){
     const tl = gsap.timeline();
+    tl.to("#frostingcircle",{duration: .5, ease: "none", x: "-200"});
     tl.to("#frostingcircle",{duration: 2, ease: "none", x: "500"});
     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
     return tl;
@@ -35,7 +40,7 @@ function pinkright (){
 
 function sprinkspin (){
     const tl = gsap.timeline();
-    tl.to("#sprinkdoughnut",{duration: 2, rotation: "+=330", ease: "none", transformOrigin:"50% 50%"});
+    tl.to("#sprinkdoughnut",{duration: 2, rotation: "+=360", ease: "none", transformOrigin:"50% 50%"});
     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
     return tl;
 }
@@ -55,6 +60,13 @@ function breakoff (){
     return tl;
 }
 
+function lauren (){
+    const tl = gsap.timeline();
+    tl.to("#slogan",{duration: .5, ease: "none", x: "-200"});
+    //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
+    return tl;
+}
+
 
 
 
@@ -65,10 +77,11 @@ function breakoff (){
 
 mainTL.add(donutspin(),"same")
 .add(donutleft(),"same")
-.add(pinkright())
+.add(pinkmove())
 .add(sprinkspin(),"spin")
 .add(sprinkright(),"spin")
-.add(breakoff());
+.add(breakoff())
+.add(lauren());
 
 
 
