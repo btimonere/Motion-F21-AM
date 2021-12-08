@@ -25,47 +25,51 @@ function donutspin (){
 
 function donutleft (){
     const tl = gsap.timeline();
-    tl.to("#plaindoughnut",{duration: 2, ease: "none", x: "-960"});
+    tl.to("#plaindoughnut",{duration: 2, ease: "none", x: "-860"});
     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
     return tl;
 }
 
 function pinkmove (){
-    const tl = gsap.timeline();
-    tl.to("#frostingcircle",{duration: .5, ease: "none", x: "-200"});
+    const tl = gsap.timeline({delay: -1});
+    tl.from("#frostingcircle", {duration: .001, autoAlpha: 0})
+    tl.to("#frostingcircle",{duration: 1, ease: "none", x: "-500"});
+    tl.to("#frostingcircle",{duration: .5});
     tl.to("#frostingcircle",{duration: 2, ease: "none", x: "500"});
     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
     return tl;
 }
 
 function sprinkspin (){
-    const tl = gsap.timeline();
-    tl.to("#sprinkdoughnut",{duration: 2, rotation: "+=360", ease: "none", transformOrigin:"50% 50%"});
+    const tl = gsap.timeline({delay: -2});
+    tl.from("#sprinkdoughnut", {duration: .001, autoAlpha: 0})
+    tl.to("#sprinkdoughnut",{duration: 1, rotation: "+=360", ease: "none", transformOrigin:"50% 50%"});
     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
     return tl;
 }
 
 function sprinkright (){
-    const tl = gsap.timeline();
-    tl.to("#sprinkdoughnut",{duration: 2, ease: "none", x: "500"});
+    const tl = gsap.timeline({delay: -2});
+    tl.to("#sprinkdoughnut",{duration: 1, ease: "none", x: "500"});
     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
     return tl;
 }
 
 function breakoff (){
     const tl = gsap.timeline();
-    tl.to("#bottomhalf",{duration: .5, ease: "none", rotation: "-60", transformOrigin: "right 50%"});
-    tl.to("#bottomhalf",{duration: 2, ease: "none", rotation: "-300", transformOrigin: "50% 50%", y:1500});
+    tl.from("#hey", {duration: .001, autoAlpha: 0})
+    tl.to("#hey",{duration: .5, ease: "none", rotation: "-60", transformOrigin: "right 50%"});
+    tl.to("#hey",{duration: 2, ease: "none", rotation: "-300", transformOrigin: "50% 50%", y:1500});
     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
     return tl;
 }
 
-function lauren (){
-    const tl = gsap.timeline();
-    tl.to("#slogan",{duration: .5, ease: "none", x: "-200"});
-    //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
-    return tl;
-}
+// function lauren (){
+//     const tl = gsap.timeline();
+//     tl.to("#slogan",{duration: .5, ease: "none", x: "-200"});
+//     //tl.from("#plaindoughnut", {duration: 1, ease: "none", y:"-100" });
+//     return tl;
+// }
 
 
 
@@ -81,7 +85,7 @@ mainTL.add(donutspin(),"same")
 .add(sprinkspin(),"spin")
 .add(sprinkright(),"spin")
 .add(breakoff())
-.add(lauren());
+// .add(lauren());
 
 
 

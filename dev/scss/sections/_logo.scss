@@ -30,9 +30,18 @@ height: 100%;
 svg{
 
     #frostingcircle{
-        position: relative;
+        visibility: hidden;
     }
-
+    #sprinkdoughnut{
+        visibility: hidden;
+    }
+    #logo{
+        visibility: hidden;
+    }
+    #hey{
+        visibility: hidden;
+        right: 30px;
+    }
 
 }
 

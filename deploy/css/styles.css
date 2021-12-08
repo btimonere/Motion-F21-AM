@@ -453,5 +453,15 @@ textarea {
   height: 100%;
 }
 #logo > div svg #frostingcircle {
-  position: relative;
+  visibility: hidden;
+}
+#logo > div svg #sprinkdoughnut {
+  visibility: hidden;
+}
+#logo > div svg #logo {
+  visibility: hidden;
+}
+#logo > div svg #hey {
+  visibility: hidden;
+  right: 30px;
 }
