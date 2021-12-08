@@ -458,10 +458,13 @@ textarea {
 #logo > div svg #sprinkdoughnut {
   visibility: hidden;
 }
-#logo > div svg #logo {
+#logo > div svg #yes {
   visibility: hidden;
 }
 #logo > div svg #hey {
   visibility: hidden;
   right: 30px;
+}
+#logo > div svg #belt {
+  visibility: hidden;
 }
